@@ -13,6 +13,9 @@ class Database {
     public $database = "InventorySystem";
 
     public function __construct() {
+        /**
+         *@desc Grouping together the inner functions. 
+         */
         $this->MysqlCheckConnection();
         $this->MysqCheckSelection();
     }
@@ -42,6 +45,8 @@ class Database {
     }
 
 }
-
+/**
+ *@desc Instantiating the Database object. 
+ */
 $connect = new Database();
 ?>
