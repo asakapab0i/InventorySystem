@@ -81,7 +81,7 @@ a:active{
 }
 #wrapper{
     width:1000px;
-    margin:5px auto 0px;
+    margin:10px auto 0px;
     text-align:left;
     margin-bottom:5px;
     background-color:#d3d9dc;
@@ -108,8 +108,7 @@ a:active{
     margin-top: 10px;
     margin-bottom: 10px;
     width:880px;
-    height: 390px;
-    position: relative;
+    height: 430px;
     text-align: center;
     background-color:#006699;
     padding:50px;
