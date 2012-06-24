@@ -9,7 +9,7 @@ function mainHeader() {
 
 function topRightLinks() {
     echo '<span class="dates"> ';
-    accountDisplay();
+   // accountDisplay();
     echo '</span>';
 
     echo '
@@ -17,33 +17,33 @@ function topRightLinks() {
     echo '</span>';
 }
 
-function accountDisplay() {
-    require_once 'connections/connection.php';
-
-    $x = $_SESSION['username'];
-
-    if (isset($_SESSION['username'])) {
-
-        $sql = mysql_query("SELECT * FROM employee WHERE username='$x'") or die(mysql_error());
-
-
-        $count = mysql_num_rows($sql);
-
-        if ($count == 1) {
-
-            while ($row = mysql_fetch_array($sql)) {
-
-                $accountName = $row['emp_name'];
-                $accountId = $row['emp_id'];
-
-                echo "<br/><br/><br/><br/><a href=\"profile.php?aid=$accountId\">$accountName </a>";
-                echo "| <a href=\"../messages.php\">Messages(<span style=\"color:red;font-weight:bold\">238</span>)</a>";
-                echo "| <a href=\"../logout.php\">Logout</a>
-			<hr/>
-			";
-            }
-        }
-    }
-}
+//function accountDisplay() {
+//    require_once 'connections/connection.php';
+//
+//    $x = $_SESSION['username'];
+//
+//    if (isset($_SESSION['username'])) {
+//
+//        $sql = mysql_query("SELECT * FROM employee WHERE username='$x'") or die(mysql_error());
+//
+//
+//        $count = mysql_num_rows($sql);
+//
+//        if ($count == 1) {
+//
+//            while ($row = mysql_fetch_array($sql)) {
+//
+//                $accountName = $row['emp_name'];
+//                $accountId = $row['emp_id'];
+//
+//                echo "<br/><br/><br/><br/><a href=\"profile.php?aid=$accountId\">$accountName </a>";
+//                echo "| <a href=\"../messages.php\">Messages(<span style=\"color:red;font-weight:bold\">238</span>)</a>";
+//                echo "| <a href=\"../logout.php\">Logout</a>
+//			<hr/>
+//			";
+//            }
+//        }
+//    }
+//}
 
 ?>
