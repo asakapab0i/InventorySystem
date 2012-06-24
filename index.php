@@ -23,11 +23,11 @@ include 'includes/footer.php';
                 <a href="index.php"><img src="assets/images/mainLogo2.png"></a>
             </header>
             <div id="main_section">
-            
-             
+
+
                 <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><h3><a href="Login" class="bigbutton">LOGIN</a></h3>
-                
-                
+
+
             </div>
             <div id="main_footer" class="links">
                 <?php mainFooter(); ?>

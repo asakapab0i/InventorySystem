@@ -14,7 +14,7 @@ class Database {
 
     public function __construct() {
         /**
-         *@desc Grouping together the inner functions. 
+         * @desc Grouping together the inner functions. 
          */
         $this->MysqlCheckConnection();
         $this->MysqCheckSelection();
@@ -44,9 +44,15 @@ class Database {
         }
     }
 
+    public function MysqlClose() {
+
+        mysql_close();
+    }
+
 }
+
 /**
- *@desc Instantiating the Database object. 
+ * @desc Instantiating the Database object. 
  */
 $connect = new Database();
 ?>

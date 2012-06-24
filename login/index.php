@@ -7,7 +7,7 @@ include_once '../library/datacleansing.php';
 
 $error_message = '';
 
-if(isset($_SESSION['user'])) {
+if (isset($_SESSION['user'])) {
     header('Location: ../Employee/');
 }
 
@@ -29,7 +29,7 @@ if (isset($_POST['submit'])) {
     if (mysql_num_rows($sql) == 1) {
 
         $_SESSION['user'] = $_POST['user'];
-        
+
         header("Location: ../Employee/");
     } else {
 // display the error message

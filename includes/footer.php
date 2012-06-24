@@ -8,6 +8,7 @@ function mainFooter(){
 			<a href="http://troubledblogger.wordpress.com">troubledblogger\'s blog</a><center><p class="dates">Licensed Under GNU GPL</p></center>
            	
 	';
-mysql_close();
+$connect = new Database();
+$connect->MysqlClose();
 }
 ?>
