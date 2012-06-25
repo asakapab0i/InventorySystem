@@ -13,15 +13,11 @@ include 'includes/footer.php';
         <title>Welcome to Homepage</title>
     </head>
     <body>
-        <div id = "wrapper">
-            <header id="main_header">
-                <div id="rightAlign">    
-                    <?php
-                    mainHeader();
-                    ?>
-                </div>
-                <a href="index.php"><img src="assets/images/mainLogo2.png"></a>
-            </header>
+        <div id = "wrapper">  
+            <?php
+            mainHeader();
+            ?>
+
             <div id="main_section">
 
 

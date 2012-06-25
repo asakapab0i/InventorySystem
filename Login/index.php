@@ -1,10 +1,10 @@
 <?php
 session_start();
 include '../library/connections/connection.php';
-include '../includes/header.php';
-include '../includes/footer.php';
+include 'includes/header.php';
+include 'includes/footer.php';
 include_once '../library/datacleansing.php';
-include_once 'includes/html_codes.php';
+include_once 'includes/controller.php';
 /**
  * @desc This includes defines the behavior of the login page. 
  */
@@ -23,14 +23,11 @@ include_once 'includes/html_codes.php';
     </head>
     <body>
         <div id = "wrapper">
-            <header id="main_header">
-                <div id="rightAlign">
-                    <?php
-                    mainHeader();
-                    ?>
-                </div>
-                <a href="index.php"><img src="../assets/images/mainLogo2.png"></a>
-            </header>
+
+            <?php
+            mainHeader();
+            ?>
+
             <div id="main_section">
 
                 <h3><a href="../" class="minibutton">Back</a></h3>

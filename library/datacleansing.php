@@ -20,6 +20,6 @@ class DataCleansing {
     }
 }
 
-$cleanse = new DataCleansing();
+$CleanData = new DataCleansing();
 
 ?>
