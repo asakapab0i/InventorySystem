@@ -20,12 +20,25 @@ include 'includes/footer.php';
             <?php
             mainHeader();
             ?>
+            <div id="top_search">
+                <?php
+                if (isset($_SESSION['username'])) {
+                    mainAnouncements();
+                } else {
+                    firstPageRules();
+                }
+                ?>
+            </div>
 
             <div id="main_section">
 
-
-                <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><h3><a href="Login" class="bigbutton">LOGIN</a></h3>
-
+  <?php if( isset($_SESSION['username']) ) {
+		echo '<br/><br/><br/><br/><br/><h3>Inventory Portal</h3>';
+		echo '<h3><a href="../inventory/employee/home.php" class="bigbutton">HOME</a></h3>';
+		}
+	else{
+		 echo '<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><h3>
+                     <a href="Login/" class="bigbutton">LOGIN</a></h3>';}?>
 
             </div>
             <div id="main_footer" class="links">

@@ -1,12 +1,14 @@
 <?php
 /**
- * @desc HOMEPAGE INDEX PAGE~!
+ * @desc LOGIN INDEX PAGE~!
  */
 session_start();
 include '../library/connections/connection.php';
-include_once '../library/datacleansing.php';
+include '../library/datacleansing.php';
 include '../includes/header.php';
 include '../includes/footer.php';
+
+//local include files
 include 'includes/controller.php';
 ?>
 
@@ -27,6 +29,9 @@ include 'includes/controller.php';
             <?php
             mainHeader();
             ?>
+            <div id="top_search">
+                <?php firstPageRules(); ?>
+            </div>
 
 
             <div id="main_section">
