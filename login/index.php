@@ -4,7 +4,7 @@
  */
 session_start();
 include '../library/connections/connection.php';
-include '../library/datacleansing.php';
+include '../library/DataCleansing.php';
 include '../includes/header.php';
 include '../includes/footer.php';
 
