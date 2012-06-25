@@ -8,7 +8,7 @@ function mainHeader() {
     topRightLinks();
     echo '
 		</div>
-	<a href="../InventorySystem"><img src="assets/images/mainLogo2.png"></a>
+	<img src="assets/images/mainLogo2.png"></a>
 		</header>
 	';
 }

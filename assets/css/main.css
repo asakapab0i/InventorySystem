@@ -97,6 +97,7 @@ a:active{
     padding:5px 10px 5px 10px;
     display:block;
     background-color:#006699;
+    border-radius: 5px;
 }
 #rightAlign{
     float:right;

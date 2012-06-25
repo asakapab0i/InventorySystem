@@ -35,6 +35,8 @@ include 'includes/login_controller.php';
             <div id="main_section">
 
                 <h3><a href="../" class="minibutton">Back</a></h3>
+                <h4>Forgot password? Contact an authorized person <a href="../Contact">here</a>!</h4>
+
                 <br/><br/><br/>
                 <form id="generalform" class="container" method="post" action="">
                     <h3>Login</h3><br/>
@@ -43,12 +45,26 @@ include 'includes/login_controller.php';
                     ?>
                     <div class="field">
                         <label for="username">
+                            <!-- 
+
+                        Deprecated
+                        align = "center"
+
+
+                            -->
                             <div align="center">Username:</div>
                         </label>
                         <input type="text" class="input" id="username" name="username" maxlength="20"/>
                     </div>
                     <div class="field">
                         <label for="password">
+                            <!-- 
+                                                         
+                            Deprecated
+                            align = "center"
+                                                         
+                                                         
+                            -->
                             <div align="center">Password:</div>
                         </label>
                         <input type="password" class="input" id="password" name="password" maxlength="20"/>
