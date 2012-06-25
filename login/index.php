@@ -9,7 +9,7 @@ include '../includes/header.php';
 include '../includes/footer.php';
 
 //local include files
-include 'includes/controller.php';
+include 'includes/login_controller.php';
 ?>
 
 <!DOCTYPE html>
