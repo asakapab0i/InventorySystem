@@ -1,4 +1,8 @@
+
 <?php
+/**
+ * @desc LOGIN INDEX PAGE~!
+ */
 session_start();
 include '../library/connections/connection.php';
 include 'includes/header.php';
@@ -24,9 +28,9 @@ include_once 'includes/controller.php';
     <body>
         <div id = "wrapper">
 
-            <?php
-            mainHeader();
-            ?>
+<?php
+mainHeader();
+?>
 
             <div id="main_section">
 
@@ -34,9 +38,9 @@ include_once 'includes/controller.php';
                 <br/><br/><br/>
                 <form id="generalform" class="container" method="post" action="">
                     <h3>Login</h3><br/>
-                    <?php
-                    echo $error_message;
-                    ?>
+<?php
+echo $error_message;
+?>
                     <div class="field">
                         <label for="username">
                             <div align="center">Username:</div>
@@ -63,7 +67,7 @@ include_once 'includes/controller.php';
 
 
             <div id="main_footer" class="links">
-                <?php mainFooter(); ?>
+<?php mainFooter(); ?>
             </div>
 
 

@@ -1,4 +1,7 @@
 <?php
+/**
+ * @desc HOMEPAGE INDEX PAGE~!
+ */
 include 'library/connections/connection.php';
 include 'includes/header.php';
 include 'includes/footer.php';

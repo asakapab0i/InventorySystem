@@ -1,10 +1,12 @@
 <?php
+/**
+ * @desc EMPLOYEE INDEX PAGE~!
+ */
 session_start();
 include '../library/connections/connection.php';
 include '../library/datacleansing.php';
 include '../includes/header.php';
 include '../includes/footer.php';
-
 include_once 'includes/controller.php';
 /**
  * @desc This includes defines the behavior of the login page. 
