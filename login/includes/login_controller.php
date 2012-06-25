@@ -3,6 +3,8 @@
 /**
  * @desc Organized codes so that the workplace is clean and neat looking
  */
+include '../library/DataCleansing.php';
+
 $error_message = '';
 
 if (isset($_SESSION['username'])) {
