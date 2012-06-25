@@ -5,8 +5,8 @@
  */
 session_start();
 include '../library/connections/connection.php';
-include 'includes/header.php';
-include 'includes/footer.php';
+include '../includes/header.php';
+include '../includes/footer.php';
 include_once '../library/datacleansing.php';
 include_once 'includes/controller.php';
 /**
