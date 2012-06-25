@@ -1,17 +1,44 @@
-
 <?php
-/**
- * @desc LOGIN INDEX PAGE~!
- */
 session_start();
-include '../library/connections/connection.php';
+include '../connections/connection.php';
 include '../includes/header.php';
 include '../includes/footer.php';
 include_once '../library/datacleansing.php';
-include_once 'includes/controller.php';
-/**
- * @desc This includes defines the behavior of the login page. 
- */
+
+$error_message = '';
+
+if (isset($_SESSION['user'])) {
+    header('Location: ../Employee/');
+}
+
+
+if (isset($_POST['submit'])) {
+//username and password get data from form
+    $username = $_POST['username'];
+    $password = $_POST['password'];
+
+
+//to protect from SQL Injection see library/datacleansing.php
+    $username = $cleanse->StripAndEscape($username);
+    $password = $cleanse->StripAndEscape($password);
+
+
+    $sql = mysql_query("SELECT * FROM accounts WHERE user='$username' and password ='$password'")
+            or die(mysql_error());
+
+    if (mysql_num_rows($sql) == 1) {
+
+        $_SESSION['user'] = $_POST['user'];
+
+        header("Location: ../Employee/");
+    } else {
+// display the error message
+        $value = "Wrong Username or Password!";
+        $error_message = '<span class="error">';
+        $error_message .= "$value";
+        $error_message.= "</span><br/><br/>";
+    }
+}
 ?>
 
 <!DOCTYPE html>
@@ -27,20 +54,23 @@ include_once 'includes/controller.php';
     </head>
     <body>
         <div id = "wrapper">
-
-<?php
-mainHeader();
-?>
-
+            <header id="main_header">
+                <div id="rightAlign">
+                    <?php
+                    mainHeader();
+                    ?>
+                </div>
+                <a href="index.php"><img src="../assets/images/mainLogo2.png"></a>
+            </header>
             <div id="main_section">
 
                 <h3><a href="../" class="minibutton">Back</a></h3>
                 <br/><br/><br/>
                 <form id="generalform" class="container" method="post" action="">
                     <h3>Login</h3><br/>
-<?php
-echo $error_message;
-?>
+                    <?php
+                    echo $error_message;
+                    ?>
                     <div class="field">
                         <label for="username">
                             <div align="center">Username:</div>
@@ -67,7 +97,7 @@ echo $error_message;
 
 
             <div id="main_footer" class="links">
-<?php mainFooter(); ?>
+                <?php mainFooter(); ?>
             </div>
 
 

@@ -14,6 +14,7 @@ label{
     margin:15px auto 0px;
     padding:20px;
     background:#006699;
+    overflow:auto;
     border-radius:7px;
     -moz-border-radius:7px;
     -webkit-border-radius:7px;
