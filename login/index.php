@@ -1,44 +1,15 @@
 <?php
+/**
+ * @desc LOGIN INDEX PAGE~!
+ */
 session_start();
-include '../connections/connection.php';
+include '../library/connections/connection.php';
+include '../library/datacleansing.php';
 include '../includes/header.php';
 include '../includes/footer.php';
-include_once '../library/datacleansing.php';
 
-$error_message = '';
-
-if (isset($_SESSION['user'])) {
-    header('Location: ../Employee/');
-}
-
-
-if (isset($_POST['submit'])) {
-//username and password get data from form
-    $username = $_POST['username'];
-    $password = $_POST['password'];
-
-
-//to protect from SQL Injection see library/datacleansing.php
-    $username = $cleanse->StripAndEscape($username);
-    $password = $cleanse->StripAndEscape($password);
-
-
-    $sql = mysql_query("SELECT * FROM accounts WHERE user='$username' and password ='$password'")
-            or die(mysql_error());
-
-    if (mysql_num_rows($sql) == 1) {
-
-        $_SESSION['user'] = $_POST['user'];
-
-        header("Location: ../Employee/");
-    } else {
-// display the error message
-        $value = "Wrong Username or Password!";
-        $error_message = '<span class="error">';
-        $error_message .= "$value";
-        $error_message.= "</span><br/><br/>";
-    }
-}
+//local include files
+include 'includes/controller.php';
 ?>
 
 <!DOCTYPE html>
@@ -54,14 +25,15 @@ if (isset($_POST['submit'])) {
     </head>
     <body>
         <div id = "wrapper">
-            <header id="main_header">
-                <div id="rightAlign">
-                    <?php
-                    mainHeader();
-                    ?>
-                </div>
-                <a href="index.php"><img src="../assets/images/mainLogo2.png"></a>
-            </header>
+
+            <?php
+            mainHeader();
+            ?>
+            <div id="top_search">
+                <?php firstPageRules(); ?>
+            </div>
+
+
             <div id="main_section">
 
                 <h3><a href="../" class="minibutton">Back</a></h3>
