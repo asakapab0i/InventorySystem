@@ -4,10 +4,8 @@
  */
 session_start();
 include '../library/connections/connection.php';
-include '../library/DataCleansing.php';
 include '../includes/header.php';
 include '../includes/footer.php';
-
 //local include files
 include 'includes/login_controller.php';
 ?>
