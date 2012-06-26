@@ -2,7 +2,7 @@
 
 session_start();
 /**
- * @desc EMPLOYEE INDEX PAGE~!
+ * @desc LOGOUT INDEX PAGE~!
  */
 
 /**
@@ -20,7 +20,8 @@ class Logout {
 
     /**
      *
-     * @return boolean  if TRUE then will execute the redirectHome as TRUE
+     * @return boolean  
+     * @desc if TRUE then will execute the redirectHome as TRUE
      *  
      */
     public function isLoggedin() {
@@ -44,6 +45,8 @@ class Logout {
 
             session_destroy();
             header('Location: ../');
+        } else {
+            echo 'You are not allowed to view this!';
         }
     }
 
