@@ -3,13 +3,18 @@
 /**
  * @desc Organized codes so that the workplace is clean and neat looking
  */
-include '../library/DataCleansing.php';
+/**
+ * @desc Create a new instance of Session and pass the location of the page it is 
+ * intended to be. 
+ * 
+ * Instantiating the SessionCheck and used its function
+ */
+$CheckLogin = new SessionCheck();
+$CheckLogin->LoginCheckSession();
+
+
 
 $error_message = '';
-
-if (isset($_SESSION['username'])) {
-    header('Location: ../Employee/');
-}
 
 
 if (isset($_POST['submit'])) {
@@ -35,7 +40,7 @@ if (isset($_POST['submit'])) {
         /**
          * @desc Assigning the sessions from the $username 
          */
-        $_SESSION['username'] = $username;
+        $_SESSION['user'] = $username;
 
         header('Location: ../Employee/');
     } else {

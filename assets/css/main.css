@@ -85,6 +85,7 @@ a:active{
     text-align:left;
     margin-bottom:5px;
     background-color:#d3d9dc;
+    position: inherit;
 }
 #main_header{
     /*space with logo and top links*/

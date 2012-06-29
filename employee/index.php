@@ -2,15 +2,20 @@
 /**
  * @desc EMPLOYEE INDEX PAGE~!
  */
-session_start();
-include '../library/connections/connection.php';
-include '../library/datacleansing.php';
+include '../library/connections/Connection.php';
+include '../library/SessionCheck.php';
 include '../includes/header.php';
 include '../includes/footer.php';
-include_once 'includes/controller.php';
+include_once 'includes/employee_controller.php';
 /**
  * @desc This includes defines the behavior of the login page. 
  */
+/**
+ * @desc Instantiate the SessionCheck 
+ */
+$CheckSession = new SessionCheck();
+$CheckSession->CheckSession();
+$CheckSession->CheckUser();
 ?>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -43,7 +48,7 @@ include_once 'includes/controller.php';
                 <?php employeeMenu(); ?>
             </div>
             <div id="main_section_widget_cover" class="dates">
-                <?php //recentlyAddedItems(); ?>
+                <?php recentlyAddedItems(); ?>
             </div>
             <div id="main_section2" class="dates">
                 <?php personalSpace(); ?>

@@ -9,6 +9,7 @@
     padding: 19px;
     background-color:#006699;
     border: solid 1px #CC6600;
+
 }
 #main_section2{
     margin:10px 7px 0px;
@@ -63,6 +64,7 @@
     overflow:auto;
     background-color:#006699;
     padding:19px;
+    position: relative;
 }
 
 h6{ /*address in shipping info*/

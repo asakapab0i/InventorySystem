@@ -15,23 +15,27 @@ class Logout {
     private $session;
 
     public function __construct() {
-        $this->redirectHome();
+        $this->isLoggedin();
     }
 
     /**
      *
      * @return boolean  
-     * @desc if TRUE then will execute the redirectHome as TRUE
+     * @desc if TRUE then will execute the following.
      *  
      */
     public function isLoggedin() {
-        $this->session = $_SESSION['username'];
+        $this->session = $_SESSION['user'];
 
         if ($this->session) {
-            return TRUE;
+            session_destroy();
+            session_unregister($this->session);
+            session_unset();
+
+            header('Location: ../');
         } else {
             echo 'You should not see this.';
-            //header('Location: ../');
+            header('Location: ../');
         }
     }
 
@@ -39,17 +43,6 @@ class Logout {
      * @desc Executes the session_destroy if isLoggedin returns true.
      *  
      */
-    public function redirectHome() {
-
-        if ($this->isLoggedin() == TRUE) {
-
-            session_destroy();
-            header('Location: ../');
-        } else {
-            echo 'You are not allowed to view this!';
-        }
-    }
-
 }
 
 $Logout = new Logout();

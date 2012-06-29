@@ -2,8 +2,9 @@
 /**
  * @desc LOGIN INDEX PAGE~!
  */
-session_start();
-include '../library/connections/connection.php';
+include '../library/connections/Connection.php';
+include '../library/SessionCheck.php';
+include '../library/DataCleansing.php';
 include '../includes/header.php';
 include '../includes/footer.php';
 //local include files

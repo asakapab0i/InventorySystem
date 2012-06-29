@@ -3,6 +3,7 @@
 /**
  * @desc Organized codes so that the workplace is clean and neat looking
  */
+
 function employeeMenu() {
 
     echo '
@@ -27,40 +28,27 @@ function employeeMenu() {
 	';
 }
 
-function mainAnouncements() {
-    echo '
-	
-	<h3>News &amp; Anouncements</h3>
-	
-            <h4>Tommorow is holiday!</h4>
-			<p>*Monday May 28 2012 08:20:15</p> 
-			<hr>
-<p class="dates">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software.<hr/><br/></p>
-<p class="dates"><a href="anouncement.php">More Anouncements...</a></p>';
-}
-
 function recentlyAddeditems() {
-    require_once('../includes/connect.php');
     echo '<h3>Recently Added Products</h3> <hr/>';
     echo '<div id="main_section_widget">';
 
 
 
-    $sql = mysql_query("SELECT * FROM product_detail ORDER BY product_id DESC LIMIT 20") or die(mysql_error());
+    $sql = mysql_query("SELECT * FROM products ORDER BY id DESC LIMIT 20") or die(mysql_error());
 
     if ($sql) {
         while ($row = mysql_fetch_array($sql)) {
-            $product_name = $row['product_name'];
-            $product_id = $row['product_id'];
-            $product_gen_name = $row['product_generic_name'];
+            $name = $row['name'];
+            $id = $row['id'];
+            $category = $row['category'];
 
-            echo "<a href=\"product.php?pid=$product_id\">$product_name | $product_gen_name<br/></a>
+            echo '<a href="product.php?pid=' . urlencode($name) . '">' . $name . ' | ' . $category . '<br/></a>
 					<hr/>
-					";
+					';
         }
         echo '</div>';
         echo '
-			<p><br/><a href="recentItems.php">More items...</a></p>
+			<p><br/><a href="recentitems.php">More items...</a></p>
 		
 		';
     }

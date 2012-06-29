@@ -26,8 +26,8 @@ function topRightLinks() {
 function accountDisplay() {
 
 
-    if (isset($_SESSION['username'])) {
-        $x = $_SESSION['username'];
+    if (isset($_SESSION['user'])) {
+        $x = $_SESSION['user'];
 
         $sql = mysql_query("SELECT * FROM accounts WHERE user='$x'") or die(mysql_error());
 
@@ -44,9 +44,9 @@ function accountDisplay() {
                 $lname = $row['lastname'];
                 $mname = $row['middlename'];
 
-                echo "<br/><br/><br/><br/><a href=\"profile.php\">$fname $lname $mname</a>";
+                echo "<br/><br/><br/><a href=\"profile.php\">$fname $lname $mname</a>";
                 echo "| <a href=\"../messages.php\">Messages(<span style=\"color:red;font-weight:bold\">238</span>)</a>";
-                echo "| <a href=\"../Logout/\">Logout</a>
+                echo "| <a href=\"/InventorySystem/Logout/\">Logout</a>
 			<hr/>
 			";
             }
@@ -60,6 +60,18 @@ function firstPageRules() {
 	<h3>News &amp; Anouncements</h3>
 	
             <h4>Attention Outsiders!!!</h4>
+			<p>*Monday May 28 2012 08:20:15</p> 
+			<hr>
+<p class="dates">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software.<hr/><br/></p>
+<p class="dates"><a href="anouncement.php">More Anouncements...</a></p>';
+}
+
+function mainAnouncements() {
+    echo '
+	
+	<h3>News &amp; Anouncements</h3>
+	
+            <h4>Tommorow is holiday!</h4>
 			<p>*Monday May 28 2012 08:20:15</p> 
 			<hr>
 <p class="dates">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software.<hr/><br/></p>
