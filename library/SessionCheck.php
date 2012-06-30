@@ -23,6 +23,7 @@ class SessionCheck {
         $this->session = $_SESSION['user'];
         if (!$this->session) {
             // redirect to home page if no session available.
+            return TRUE;
             header("Location: ../");
         } else {
             //Do nothing here, there is a session.
@@ -40,6 +41,8 @@ class SessionCheck {
              * it will redirect to homepage
              */
             header('Location: ../');
+        } else {
+            return TRUE;
         }
     }
 

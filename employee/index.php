@@ -4,9 +4,13 @@
  */
 include '../library/connections/Connection.php';
 include '../library/SessionCheck.php';
+include '../library/SessionTimeOut.php';
 include '../includes/header.php';
 include '../includes/footer.php';
-include_once 'includes/employee_controller.php';
+/**
+ * @desc Local include file 
+ */
+include 'includes/employee_controller.php';
 /**
  * @desc This includes defines the behavior of the login page. 
  */

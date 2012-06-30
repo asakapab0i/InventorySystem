@@ -7,7 +7,7 @@
  * @desc Create a new instance of Session and pass the location of the page it is 
  * intended to be. 
  * 
- * Instantiating the SessionCheck and used its function
+ * Instantiating the SessionCheck and use its function
  */
 $CheckLogin = new SessionCheck();
 $CheckLogin->LoginCheckSession();
@@ -41,6 +41,7 @@ if (isset($_POST['submit'])) {
          * @desc Assigning the sessions from the $username 
          */
         $_SESSION['user'] = $username;
+        $_SESSION['SessionTimeOut'] = strtotime("now");
 
         header('Location: ../Employee/');
     } else {
