@@ -11,8 +11,10 @@ function out(_row){
 }
 function clicked(_row){
 	var x = _row;
-	document.location.href=("../employee/product.php?pid="+ x);
-	}
+	//document.location.href=("../employee/product.php?pid="+ x);
+        document.location.href=("../Tools/?Item=Product&Id="+ x);
+	
+    }
 //add to input
 function addtosale(_row){
 	var x = _row;

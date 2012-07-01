@@ -59,6 +59,7 @@ th{
     color:#888888;
     font-weight:bold;
     text-decoration:underline;
+    padding:5px;
 }
 td{
     padding:3px 10px;
@@ -135,6 +136,35 @@ a:active{
     border-radius: 5px;
 
 }
+
+#main_tool_section_cover{
+    margin:10px 7px 0px;
+    margin-bottom:10px;
+    float:left;
+    text-align:left;
+    border-radius: 5px;
+    width:944px;
+    height:500px;
+    padding: 19px;
+    background-color:#006699;
+    border: solid 1px #CC6600;
+    padding:19px;
+}
+
+#main_tool_section{
+    margin:2px 7px 0px;
+    margin-bottom:10px;
+    float:left;
+    text-align:left;
+    width:880px;
+    height:350px;
+    padding: 19px;
+    overflow:auto;
+    background-color:#006699;
+    padding:19px;
+    position: relative;
+}
+
 .dates{
     color:#CC6600;
     font-weight:bold;
@@ -181,5 +211,16 @@ p{
 h2{
     color:#CC6600;
     text-shadow:1px 1px 3px #080808;
+}
+.inputsearch{
+    font-size:15px;
+    padding:3px;
+    border:1px solid #b9bdc1;
+    width:100px;
+    color:#505050;
+    border-radius: 5px;
+}
+.inputsearch:focus{
+    border: solid 1px #CC6600;
 }
 

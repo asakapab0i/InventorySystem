@@ -68,10 +68,10 @@ label{
     border:1px solid #b9bdc1;
     width:500px;
     color:#505050;
+    border-radius: 5px;
 }
 .input:focus{
     border:1px solid #CC6600;
-    background-color:white;
 }
 .textarea{
     font-family:Arial;

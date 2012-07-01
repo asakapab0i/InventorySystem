@@ -1,5 +1,8 @@
 <?php
 
+/**
+ * @desc Start all  General Sessions in every page!
+ */
 session_start();
 
 /**
@@ -12,7 +15,9 @@ class SessionCheck {
 
     public $session;
     public $sql_query;
-    private $location;
+    public $logLength;
+    public $ctime;
+    public $sessionstart;
 
     /**
      *
@@ -58,6 +63,30 @@ class SessionCheck {
         if (isset($_SESSION['user'])) {
             header('Location: ../Employee/');
         }
+    }
+
+    public function SessionActivity() {
+        $this->logLength = 1;
+        $this->ctime = strtotime("now");
+        $this->sessionstart = $_SESSION['SessionTimeOut'];
+
+        if (!isset($this->sessionstart)) {
+
+            $this->sessionstart = $this->ctime;
+        } else {
+
+            if (((strtotime("now") - $this->sessionstart) > $this->logLength)
+                    && ($this->CheckSession() && $this->CheckUser()) == TRUE) {
+                header('Location: ../Logout/');
+                exit;
+            } else {
+                $sessionstart = $this->ctime;
+            }
+        }
+    }
+
+    public function CheckUserLogged() {
+        
     }
 
 }

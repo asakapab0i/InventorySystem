@@ -3,7 +3,6 @@
 /**
  * @desc Organized codes so that the workplace is clean and neat looking
  */
-
 function employeeMenu() {
 
     echo '
@@ -12,16 +11,16 @@ function employeeMenu() {
 	  <hr/></br>
   <table cellspacing="0" class="tablewidget">
     <tr>
-      <th width="44%" scope="row"><h3><a href="productlist.php" class="bigbutton">Products</a></h3></th>
-      <td width="56%"><h3><a href="sales.php" class="bigbutton">Sales</a></h3></td>
+      <th width="44%" scope="row"><h3><a href="Tools/?Item=ProductList" class="bigbutton">Products</a></h3></th>
+      <td width="56%"><h3><a href="Tools/?Item=Sales" class="bigbutton">Sales</a></h3></td>
     </tr>
     <tr>
-      <th scope="row"><h3><a href="delivery.php" class="bigbutton">Delivery</a></h3></th>
-      <td><h3><a href="returns.php" class="bigbutton">Returns</a></h3></td>
+      <th scope="row"><h3><a href="Tools/?Item=Delivery" class="bigbutton">Delivery</a></h3></th>
+      <td><h3><a href="Tools/?Item=Returns" class="bigbutton">Returns</a></h3></td>
     </tr>
     <tr>
-      <th scope="row"><h3><a href="ledger.php" class="bigbutton">Ledger</a></h3></th>
-      <td><h3><a href="reports.php" class="bigbutton">Reports</a></h3></td>
+      <th scope="row"><h3><a href="Tools/?Item=Ledger" class="bigbutton">Ledger</a></h3></th>
+      <td><h3><a href="Tools/?Item=Reports" class="bigbutton">Reports</a></h3></td>
     </tr>
   </table>
 	<hr/>

@@ -4,7 +4,6 @@
  */
 include '../library/connections/Connection.php';
 include '../library/SessionCheck.php';
-include '../library/SessionTimeOut.php';
 include '../includes/header.php';
 include '../includes/footer.php';
 /**
@@ -20,6 +19,7 @@ include 'includes/employee_controller.php';
 $CheckSession = new SessionCheck();
 $CheckSession->CheckSession();
 $CheckSession->CheckUser();
+$CheckSession->SessionActivity();
 ?>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">

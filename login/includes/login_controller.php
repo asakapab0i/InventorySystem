@@ -30,11 +30,17 @@ if (isset($_POST['submit'])) {
      */
     $username = $CleanData->StripAndEscape($username);
     $password = $CleanData->StripAndEscape($password);
-
-
+    /**
+     * @desc Mysql query to check the database 
+     */
     $sql = mysql_query("SELECT * FROM accounts WHERE user='$username' and password ='$password'")
             or die(mysql_error());
-
+    /**
+     * @desc Check there is only one result or row queried 
+     * 1 == Unique and there is a match
+     * 0 == Wrong password
+     * result>1 == Database error(Duplicates)
+     */
     if (mysql_num_rows($sql) == 1) {
 
         /**
