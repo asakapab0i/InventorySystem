@@ -8,7 +8,7 @@ function mainHeader() {
     topRightLinks();
     echo '
 		</div>
-	<img src="http://localhost/InventorySystem/assets/images/mainLogo2.png"></a>
+	<img src="http://localhost/InventorySystem/assets/images/mainLogo2.png"><img>
 		</header>
 	';
 }
@@ -70,10 +70,11 @@ function mainAnouncements() {
     echo '
 	
 	<h3>News &amp; Anouncements</h3>
+        <hr>
 	
             <h4>Tommorow is holiday!</h4>
 			<p>*Monday May 28 2012 08:20:15</p> 
-			<hr>
+			
 <p class="dates">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software.<hr/><br/></p>
 <p class="dates"><a href="anouncement.php">More Anouncements...</a></p>';
 }

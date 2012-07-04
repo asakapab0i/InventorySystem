@@ -31,9 +31,9 @@ $CheckSession->SessionActivity();
         <link rel="stylesheet" href="assets/css/forms.css"/>
         <link rel="stylesheet" href="assets/css/home.css"/>
         <link rel="stylesheet" href="assets/css/minibutton.css"/>
-        <link rel="stylesheet" href="assets/css/login.css"/>
         <link rel="stylesheet" href="assets/css/home.css"/>
         <script type="text/javascript" src="../assets/js/date_time.js"></script>
+        <script type="text/javascript" src="../assets/js/jquery.js"></script>
 
     </head>
 

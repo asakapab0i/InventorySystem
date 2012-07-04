@@ -1,6 +1,6 @@
 <?php
 /**
- * @desc TOOLS INDEX PAGE~!
+ * @desc EMPLOYEE TOOLS INDEX PAGE~!
  */
 include '../../library/connections/Connection.php';
 include '../../library/SessionCheck.php';
@@ -32,10 +32,13 @@ $CheckSession->SessionActivity();
         <link rel="stylesheet" href="http://localhost/InventorySystem/assets/css/minibutton.css"/>
         <script type="text/javascript" src="../../assets/js/date_time.js"></script>
         <script type="text/javascript" src="../../assets/js/mainjs.js"></script>
+        <script type="text/javascript" src="../../assets/js/functions.js"></script>
 
     </head>
 
-    <body>
+
+    <body onload="location.hash = 'main_tool_section_cover';">
+
         <div id="wrapper">
             <header>
                 <div id="main_header">
@@ -45,45 +48,9 @@ $CheckSession->SessionActivity();
             <div id="top_search">
                 <?php mainAnouncements(); ?>
             </div>
-
             <div id="main_tool_section_cover" class="dates">
-
-                <?php
-                if (isset($_GET['Item'])) {
-                    $x = $_GET['Item'];
-                }
-                if (isset($_GET['Search'])) {
-                    $search = $_GET['Search'];
-                }
-                if (($x == 'ProductList')) {
-                    echo '<a href="../Tools/?Item=ProductList" class="minibutton">Back</a>';
-
-                    ProductMenu();
-                    echo '<hr/>';
-
-                    echo '<div id="main_tool_section">';
-                    ProductList();
-                    echo '</div>';
-                } else if ($x == 'Sales') {
-                    Sales();
-                } else if ($x == 'Delivery') {
-                    Delivery();
-                } else if ($x == 'Returns') {
-                    Returns();
-                } else if ($x == 'Ledger') {
-                    Ledgers();
-                } else if ($x == 'Reports') {
-                    Reports();
-                } else if ($x == 'Product') {
-                    Product();
-                } else {
-                    echo 'HELLO WORLD!';
-                    header('Location: http://localhost/InventorySystem/Employee');
-                }
-                ?>
+                <?php ItemDisplay(); ?>
             </div>
-
-
             <div id="main_footer" class="links">
                 <?php mainFooter(); ?>
             </div> 

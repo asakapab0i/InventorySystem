@@ -23,7 +23,6 @@ function employeeMenu() {
       <td><h3><a href="Tools/?Item=Reports" class="bigbutton">Reports</a></h3></td>
     </tr>
   </table>
-	<hr/>
 	';
 }
 
@@ -41,7 +40,7 @@ function recentlyAddeditems() {
             $id = $row['id'];
             $category = $row['category'];
 
-            echo '<a href="product.php?pid=' . urlencode($name) . '">' . $name . ' | ' . $category . '<br/></a>
+            echo '<a href="Tools/?Item=Product&Id=' . urlencode($id) . '">' . $name . ' | ' . $category . '<br/></a>
 					<hr/>
 					';
         }

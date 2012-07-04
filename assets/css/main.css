@@ -17,7 +17,7 @@ root {
 body{
     text-align:center;
     font-family:Arial;
-    font-size:12px;
+    font-size:11px;
     color:#303030;
 }
 header,nav,section,aside,footer{
@@ -86,7 +86,6 @@ a:active{
     text-align:left;
     margin-bottom:5px;
     background-color:#d3d9dc;
-    position: inherit;
 }
 #main_header{
     /*space with logo and top links*/
@@ -138,13 +137,13 @@ a:active{
 }
 
 #main_tool_section_cover{
-    margin:10px 7px 0px;
+    margin:10px 8px 0px;
     margin-bottom:10px;
     float:left;
     text-align:left;
     border-radius: 5px;
     width:944px;
-    height:500px;
+    height:550px;
     padding: 19px;
     background-color:#006699;
     border: solid 1px #CC6600;
@@ -157,7 +156,7 @@ a:active{
     float:left;
     text-align:left;
     width:880px;
-    height:350px;
+    height:400px;
     padding: 19px;
     overflow:auto;
     background-color:#006699;
@@ -223,4 +222,84 @@ h2{
 .inputsearch:focus{
     border: solid 1px #CC6600;
 }
+#main_section_register{
+    margin:10px 7px 0px;
+    margin-bottom:10px;
+    float:left;
+    text-align:left;
+    border-radius: 5px;
+    width:944px;
+    height:500px;
+    padding: 19px;
+    background-color:#006699;
+    border: solid 1px #CC6600;
+    padding:19px;
 
+}
+#main_section_homepage{
+
+    margin:2px auto 0px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width:880px;
+    height: 430px;
+    text-align: center;
+    background-color:#006699;
+    padding:50px;
+    border: solid 1px #CC6600;
+    border-radius: 5px;
+}
+
+
+/*
+**This is where styling product view starts!
+*/
+
+#main_section_product_view{
+    margin:10px 7px 0px;
+    margin-bottom:10px;
+    float:left;
+    text-align:left;
+    border-radius: 5px;
+    width:400px;
+    height:250px;
+    padding: 19px;
+    border: solid 1px #CC6600;
+    padding:19px;
+}
+#main_section_productinfo_view{
+    margin:10px 7px 0px;
+    margin-bottom:10px;
+    float:left;
+    text-align:left;
+    border-radius: 5px;
+    width:250px;
+    height:250px;
+    padding: 19px;
+    border: solid 1px #CC6600;
+    padding:19px;
+}
+#main_section_productrelated_view{
+    margin:10px 7px 0px;
+    margin-bottom:10px;
+    float:left;
+    text-align:left;
+    border-radius: 5px;
+    width:130px;
+    height:250px;
+    padding: 19px;
+    border: solid 1px #CC6600;
+    padding:19px;
+}
+#main_section_productoptions_view{
+    margin:10px 7px 0px;
+    margin-bottom:10px;
+    float:left;
+    text-align:left;
+    border-radius: 5px;
+    width:890px;
+    height:100px;
+    padding: 19px;
+    border: solid 1px #CC6600;
+    padding:19px;
+}

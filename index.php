@@ -32,7 +32,7 @@ include 'includes/footer.php';
                 ?>
             </div>
 
-            <div id="main_section">
+            <div id="main_section_homepage">
 
                 <?php
                 if (isset($_SESSION['user'])) {

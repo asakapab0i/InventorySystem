@@ -77,7 +77,7 @@ include 'includes/login_controller.php';
                 </form>
 
                 <br/><br/><h4 id="rightAlign2" class="minibutton"><a href="#" >Click here for Admin Access</a></h4>
-                <h4 id="rightAlign2" class="minibutton"><a href="register.php" >Click here to register employee</a></h4>
+                <h4 id="rightAlign2" class="minibutton"><a href="../Register/" >Click here to register employee</a></h4>
 
             </div>
 
