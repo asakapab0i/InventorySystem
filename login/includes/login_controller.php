@@ -42,7 +42,6 @@ if (isset($_POST['submit'])) {
      * result>1 == Database error(Duplicates)
      */
     if (mysql_num_rows($sql) == 1) {
-
         /**
          * @desc Assigning the sessions from the $username 
          */
@@ -50,11 +49,21 @@ if (isset($_POST['submit'])) {
         $_SESSION['SessionTimeOut'] = strtotime("now");
 
         header('Location: ../Employee/');
-    } else {
+    } elseif (empty($username) && empty($password)) {
         /**
          * @desc  Display the error messages when logged in is incorrect
          */
-        $value = "Wrong Username or Password!";
+        $value = "Please type your username and password!";
+        $error_message = '<span class="error">';
+        $error_message .= "$value";
+        $error_message.= "</span><br/><br/>";
+    } elseif (empty($password) && !empty($username)) {
+        $value = "Please enter your password!";
+        $error_message = '<span class="error">';
+        $error_message .= "$value";
+        $error_message.= "</span><br/><br/>";
+    } elseif (empty($username) && !empty($password)) {
+        $value = "Please enter your username!";
         $error_message = '<span class="error">';
         $error_message .= "$value";
         $error_message.= "</span><br/><br/>";
